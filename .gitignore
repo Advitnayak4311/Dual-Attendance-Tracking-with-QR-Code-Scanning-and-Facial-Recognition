@@ -1,0 +1,32 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local database
+attendance.db
+*.db
+*.sqlite
+
+# Application logs
+logs/
+*.log
+
+# Dynamic media/uploads
+static/qr_codes/*
+static/uploads/*
+static/classrooms/*
+!static/qr_codes/.gitkeep
+!static/uploads/.gitkeep
+!static/classrooms/.gitkeep
+
+# IDE and OS files
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
