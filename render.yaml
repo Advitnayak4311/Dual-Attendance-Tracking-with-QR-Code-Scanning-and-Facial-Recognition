@@ -4,14 +4,10 @@ services:
     env: python
     buildCommand: pip install cmake && pip install -r requirements.txt
     startCommand: gunicorn app:app
-    disk:
-      name: sqlite-db
-      mountPath: /opt/render/project/src/database
-      sizeGB: 1
     envVars:
       - key: FLASK_SECRET
         generateValue: true
       - key: ADMIN_PASSWORD
         sync: false
       - key: DB_PATH
-        value: /opt/render/project/src/database/attendance.db
+        value: database/attendance.db
